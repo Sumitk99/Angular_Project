@@ -1,33 +1,35 @@
 
 <div *ngIf="show_ip" class="internship">
-<h3>Internship Updates</h3>
-<div>
-  <button class="btn btn-success" (click)="create_entry=!create_entry" >Create New Entry</button>
-</div>
+  <h3>Internship Updates</h3>
+  <div>
+    <button class="btn btn-success" style="display: inline-block;" (click)="onAddEntry()" >Create New Entry</button>
+  </div>
 
-<div *ngIf="create_entry">
-  <p>Enter Date</p>
-  <input type="text" (input)="onUpdateDate($event)">
-  <p>Enter Day</p>
-  <input type="text" (input)="onUpdateDay($event)">
-  <p>Enter Tasks</p>
-  <input type="text" (input)="onUpdateTask($event)">
-  <br>
-  <button class="btn btn-success" [disabled]="!add_button_status" (click)="new_entry()" >+</button>
+  <div *ngIf="create_entry">
+    <p>Enter Date</p>
+    <input type="text" (input)="onUpdateDate($event)">
+    <p>Enter Day</p>
+    <input type="text" (input)="onUpdateDay($event)">
+    <p>Enter Tasks</p>
+    <input type="text" (input)="onUpdateTask($event)">
+    <br>
+    <button class="btn btn-success" [disabled]="!add_button_status" (click)="new_entry()" >+</button>
 
-</div>
-  <a href="#"
-     class="list-group-item clearfix"
-     *ngFor="let ele of updates">
-    <div class="pull-left">
-      <h4 class="list-group-item-heading">{{ ele.day }}</h4>
-      <p class="list-group-item-text">{{ ele.date }}</p>
-      <p class="list-group-item-text">{{ ele.task }}</p>
-    </div>
-    <span class="pull-right">
-
-        </span>
-  </a>
+  </div>
+  <div *ngIf="show_ip">
+    <button class="btn btn-info" (click)="onShowEntry()">Show existing Entries</button>
+  </div>
+  <div *ngIf="show_entry">
+    <a href="#"
+       class="list-group-item clearfix"
+       *ngFor="let ele of updates">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ ele.day }}</h4>
+        <p class="list-group-item-text">{{ ele.date }}</p>
+        <p class="list-group-item-text">{{ ele.task }}</p>
+      </div>
+    </a>
+  </div>
 
 </div>
 

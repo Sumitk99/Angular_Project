@@ -14,7 +14,7 @@ export class InternshipComponent implements OnInit {
   date_input:string;
   tasks_input:string;
   add_button_status = false
-
+  show_entry  = false
   updates:intern_update[]= [new intern_update("1/1/2001", "Day 1", "Complete Internship Profile")]
   constructor() {
   setTimeout(() => {
@@ -53,6 +53,15 @@ export class InternshipComponent implements OnInit {
     else{
       this.add_button_status = true
     }
+  }
+
+  onShowEntry(){
+    this.create_entry = false
+    this.show_entry = !this.show_entry
+  }
+  onAddEntry(){
+    this.show_entry = false
+    this.create_entry = !this.create_entry
   }
   ngOnInit(): void {
   }

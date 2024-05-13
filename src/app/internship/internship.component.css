@@ -1,0 +1,19 @@
+.internship {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.create-entry,
+.show-entry {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.entry-list {
+  margin-top: 10px;
+}
