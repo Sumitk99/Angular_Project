@@ -17,8 +17,9 @@
       padding-left: 20px;
     }
   </style>
-<body>
-<h4>Languages</h4>
+ <ng-template #load>Loading...<br></ng-template>
+ <body *ngIf = "show_ln; else load">
+<h4 >Languages</h4>
 <div class="programming-languages">
   <ul>
     <li>C++</li>

@@ -22,7 +22,9 @@
       color: #999;
     }
   </style>
-<body>
+  <ng-template #load>Loading...<br></ng-template>
+
+  <body *ngIf="show_ed; else load">
 <h3>Education</h3>
 <div class="education-item">
   <p class="degree">Bachelors of Technology in Electronics and Communications</p>

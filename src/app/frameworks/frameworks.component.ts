@@ -6,5 +6,12 @@ import {Component} from "@angular/core";
 })
 
 export class FrameworksComponent {
-
+  show_fw = false
+  constructor() {
+    setTimeout(() => {
+        this.show_fw = true
+      }
+      , 1500
+    )
+  }
 }

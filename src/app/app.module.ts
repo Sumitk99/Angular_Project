@@ -7,6 +7,7 @@ import { HeadComponent } from './head/head.component';
 import { EducationComponent } from './education/education.component';
 import { LanguagesComponent} from "./languages/languages.component";
 import {FrameworksComponent} from "./frameworks/frameworks.component";
+import { InternshipComponent } from './internship/internship.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {FrameworksComponent} from "./frameworks/frameworks.component";
     HeadComponent,
     EducationComponent,
     LanguagesComponent,
-    FrameworksComponent
+    FrameworksComponent,
+    InternshipComponent
   ],
   imports: [
     BrowserModule,

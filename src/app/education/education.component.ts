@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent implements OnInit {
-
-  constructor() { }
+  show_ed = false
+  constructor() {
+    setTimeout(() =>{
+      this.show_ed = true
+    }
+      ,500
+    )
+  }
 
   ngOnInit(): void {
   }

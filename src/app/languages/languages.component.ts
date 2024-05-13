@@ -6,5 +6,13 @@ import {Component} from "@angular/core";
 })
 
 export class LanguagesComponent {
+  show_ln = false
 
+  constructor() {
+    setTimeout(() => {
+        this.show_ln = true
+      }
+      , 1000
+    )
+  }
 }
